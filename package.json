@@ -5,13 +5,22 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:client": "cd client && npm build",
+    "build:client": "cd client && npm build && npm run start:server",
     "start:server": "cd server && npm start",
-    "install:packages": "cd server && npm install && cd .. && cd client && npm install",
     "start": "node ./server",
-    "heroku-postbuild": "cd client npm install && cd .. && cd server && npm install && cd .. && cd client && npm run start"
+    "heroku-postbuild": "npm run build:client"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {}
+  "license": "ISC"
 }
