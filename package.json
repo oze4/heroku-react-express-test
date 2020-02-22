@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:client": "cd client && yarn build",
     "start:server": "cd server && npm start",
-    "install:packages": "cd server && npm install && cd .. && cd client && yarn install",
+    "install:packages": "cd server && npm install && cd .. && cd client && npm install",
     "start": "npm run install:packages && npm run build:client && npm run start:server"
   },
   "author": "",
