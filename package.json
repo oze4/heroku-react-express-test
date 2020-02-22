@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:client": "cd client && npm build && npm run start:server",
+    "build:client": "cd client && npm run build && npm run start",
     "start:server": "cd server && npm start",
     "start": "node ./server",
     "heroku-postbuild": "npm run build:client"
