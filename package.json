@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:client": "cd client && npm run build && npm run start",
-    "start:server": "cd server && npm start",
+    "build": "cd client && npm run build",
     "start": "node ./server",
-    "heroku-postbuild": "npm run build:client"
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "express": "^4.17.1",
